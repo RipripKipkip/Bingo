@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
-body {
-    font-family: unquote("Source Sans Pro, Tahoma, sans-serif");
-    line-height: 1.5rem;
-    font-size: 16px;
+$noCssVar: true;
+
+@import "~@lucca-front/scss/src/main.overridable.scss";
+
+:root {
+    @include generateCSSVarsFromTheme($theme);
 }

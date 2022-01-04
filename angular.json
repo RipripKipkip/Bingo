@@ -52,7 +52,15 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/scss/overrides",
+                "src/scss",
+                "node_modules/@lucca-front/ng/style/overrides",
+                "node_modules/@lucca-front/scss/src/overrides"
+              ]
+            }
           },
           "configurations": {
             "production": {

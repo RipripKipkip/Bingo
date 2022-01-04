@@ -1,27 +1,107 @@
+@import 'theming';
+
 .main-content {
     max-width: 600px;
-    margin: 2rem auto 0;
+    margin: _theme("spacings.bigger") auto 0;
     overflow: hidden;
 }
 
 .bingoCard {
     width: 100%;
-    margin-bottom: 1rem;
-    background-color: coral;
     border-radius: 1rem;
-    color: white;
 }
 
-.bingoCard-title {
-    font-size: 1.75rem;
-	line-height: 2.5rem;
+.bingoCard-content {
+    padding: _theme("spacings.small");
+}
+
+.bingoCard-content-title {
+    font-size: _theme("sizes.biggest.font-size");
+    line-height: _theme("sizes.biggest.line-height");
+    text-align: center;
+}
+
+.bingoCard-content-items {
+    display: grid;
+    grid-gap: _theme("spacings.smallest");
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(9, 1fr);
+    padding: _theme("spacings.smallest");
+    @media (max-width: _theme("breakpoints.m.breakAt")) {
+		grid-template-columns: repeat(7, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+	}
 }
 
 
-.bingoCard-title {}
+.bingoCard-content-item {
+    background-color: _color("white");
+    padding: _theme("spacings.small");
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+        background-color: _color("grey", "50");
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        width: 94%;
+        opacity: 0;
+        transition: 0.1s ease;
+        pointer-events: none;
+        text-align: center;
+        transform: rotate(-45deg);
+        border: 2px solid _color("secondary", "700");
+        border-radius: 50%;
+    }
+    &.active:after {
+        height: 94%;
+        opacity: 0.7;
+    }
+}
 
 
-.bingoCard-title {}
+.bingoCard-content {}
 
-
-.bingoCard-title {}
+.bingoCard {
+    &.palette-1 {
+        background-color: _color("primary", "500");
+        .bingoCard-content-items {
+            background-color: _color("primary", "700");
+        }
+        .bingoCard-content-item {
+            &.none {
+                background-color: _color("primary", "600");
+                color: _color("primary", "600");
+            }
+        }
+    }
+    &.palette-2 {
+        background-color: _color("error", "500");
+        .bingoCard-content-items {
+            background-color: _color("error", "700");
+        }
+        .bingoCard-content-item {
+            &.none {
+                background-color: _color("error", "600");
+                color: _color("error", "600");
+            }
+        }
+    }
+    &.palette-3 {
+        background-color: _color("info", "500");
+        .bingoCard-content-items {
+            background-color: _color("info", "700");
+        }
+        .bingoCard-content-item {
+            &.none {
+                background-color: _color("info", "600");
+                color: _color("info", "600");
+            }
+        }
+    }
+}

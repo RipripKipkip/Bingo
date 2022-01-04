@@ -1,0 +1,167 @@
+$palettes: (
+	"primary": (
+		"darker": #0D7359,
+		"dark": #0B8E6D,
+		"color": #09AA81,
+		"light": #45D3B0,
+		"lighter": #B8F9E9,
+		"lightest": #CFFCF1,
+		"text": #FFFFFF,
+		"see-through": #E6FEF8,
+		"50": #E6FEF8,
+		"100": #CFFCF1,
+		"200": #B8F9E9,
+		"300": #8FEFD7,
+		"400": #67E4C5,
+		"500": #45D3B0,
+		"600": #0FBD91,
+		"700": #09AA81,
+		"800": #0B8E6D,
+		"900": #0D7359
+	),
+	"secondary": (
+		"darker": #D47A0D,
+		"dark": #F38F0C,
+		"color": #FBA01E,
+		"light": #FDC63F,
+		"lighter": #FEEDA4,
+		"lightest": #FEF4C2,
+		"text": #FFFFFF,
+		"see-through": #FEFBE7,
+		"50": #FEFBE7,
+		"100": #FEF4C2,
+		"200": #FEEDA4,
+		"300": #FEE580,
+		"400": #FED762,
+		"500": #FDC63F,
+		"600": #FCB22C,
+		"700": #FBA01E,
+		"800": #F38F0C,
+		"900": #D47A0D
+	),
+	"grey": (
+		"darker": #131D35,
+		"dark": #2A3551,
+		"color": #445473,
+		"light": #96A6C5,
+		"lighter": #D2DCEF,
+		"lightest": #E0E7F6,
+		"text": #FFFFFF,
+		"see-through": #EBF0FA,
+		"50": #EBF0FA,
+		"100": #E0E7F6,
+		"200": #D2DCEF,
+		"300": #BECBE4,
+		"400": #ACBBD7,
+		"500": #96A6C5,
+		"600": #6C7C9D,
+		"700": #445473,
+		"800": #2A3551,
+		"900": #131D35
+	),
+	"success": (
+		"lightest": #E7FAE5,
+		"lighter": #D7F7D4,
+		"light": #8CDB85,
+		"color": #3C9933,
+		"dark": #1B7D12,
+		"darker": #0E6B06,
+		"text": #FFFFFF,
+		"see-through": #F7FEF6,
+		"50": #F7FEF6,
+		"100": #E7FAE5,
+		"200": #D7F7D4,
+		"300": #C2F4BE,
+		"400": #ACECA7,
+		"500": #8CDB85,
+		"600": #49B540,
+		"700": #3C9933,
+		"800": #1B7D12,
+		"900": #0E6B06
+	),
+	"warning": (
+		"lightest": #FFEEE5,
+		"lighter": #FFE4D6,
+		"light": #F79C6E,
+		"color": #E55006,
+		"dark": #CC3D00,
+		"darker": #B23000,
+		"text": #FFFFFF,
+		"see-through": #FEF5F0,
+		"50": #FEF5F0,
+		"100": #FFEEE5,
+		"200": #FFE4D6,
+		"300": #FFCFB8,
+		"400": #FCBC9C,
+		"500": #F79C6E,
+		"600": #F46A25,
+		"700": #E55006,
+		"800": #CC3D00,
+		"900": #B23000
+	),
+	"error": (
+		"lightest": #FFECEF,
+		"lighter": #FFE0E6,
+		"light": #EF8F9F,
+		"color": #E51A3B,
+		"dark": #AF0E29,
+		"darker": #91081F,
+		"text": #FFFFFF,
+		"see-through": #FFF5F7,
+		"50": #FFF5F7,
+		"100": #FFECEF,
+		"200": #FFE0E6,
+		"300": #FCC5CE,
+		"400": #FBA7B5,
+		"500": #EF8F9F,
+		"600": #EF3957,
+		"700": #E51A3B,
+		"800": #AF0E29,
+		"900": #91081F
+	),
+	"info": (
+		"darker": #083691,
+		"dark": #0A48C2,
+		"color": #2067F3,
+		"light": #6699FF,
+		"lighter": #B3CCFF,
+		"lightest": #CCDDFF,
+		"text": #FFFFFF,
+		"see-through": #E2EBFD,
+		"50": #E2EBFD,
+		"100": #CCDDFF,
+		"200": #B3CCFF,
+		"300": #9EBEFF,
+		"400": #85AEFF,
+		"500": #6699FF,
+		"600": #4280FA,
+		"700": #2067F3,
+		"800": #0A48C2,
+		"900": #083691
+	),
+);
+
+$colors: (
+	"text": (
+		"dark": (
+			"color": #131D35
+		),
+		"default": (
+			"color": #2A3551
+		),
+		"light": (
+			"color": #96A6C5
+		),
+		"placeholder": (
+			"color": #ACBBD7
+		)
+	),
+	"white": (
+		"color": #FFFFFF
+	),
+	"black": (
+		"color": #121212
+	)
+);
+$theme: _set($theme, "palettes", $palettes);
+$theme: _set($theme, "colors", $colors);
